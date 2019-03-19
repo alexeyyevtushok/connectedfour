@@ -35,12 +35,14 @@ code {
 
 .cell.player1{
   background: #16a085;
-
+  transition: all 0.3s ease;
 }
 
 .cell.player2{
   background: #e74c3c;
+  transition: all 0.3s ease;
 }
+
 
 .cellGrid {
   background-color: white;
@@ -131,6 +133,10 @@ button {
   margin-bottom: 10px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .playerLabel{
   color:black;
   display: inline-block;
@@ -155,3 +161,4 @@ button {
 .player1 {
   background: #16a085;
 }
+
