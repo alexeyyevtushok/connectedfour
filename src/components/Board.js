@@ -41,6 +41,7 @@ class Board extends Component{
   }
 
   render(){
+    console.log(this.state.game);
     //const
     const grid = [];
     const height = 6;

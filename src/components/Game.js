@@ -11,32 +11,28 @@ class Game extends Component {
       game:false
     }
   }
-  //clicking on "start" button
-  gameStarter = () => {
+  //clicking on "start(stop)" button
+  gameChanger = () => {
     this.setState(prevState => {
       return {
         game: !prevState.game
       }
     });
   }
-  //clicking on "stop" button
-  gameStopper = () => {
-    window.location.reload()
-  }
     
   render(){
     if(this.state.game===false){
       return(
       <div className="main">
-        <Header onClicked={this.gameStarter} cstate={this.state.game}/>
+        <Header onClicked={this.gameChanger} cstate={this.state.game}/>
         <div className="gameEnd">Press button to start a game</div>
       </div>
       )
     }
     return(
       <div className="main">
-        <Header onClicked={this.gameStopper} cstate={this.state.game}/>
-        <Board />
+        <Header onClicked={this.gameChanger} cstate={this.state.game}/>
+        <Board/>
       </div>
     );
   }
