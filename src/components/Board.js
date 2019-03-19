@@ -27,6 +27,7 @@ class Board extends Component{
   }
   //click to cell
   handleClick(x){
+    //if trying add cell out of range
     if(this.state.board[x].length!==6){
       const cellColor = this.state.current;
       const col = this.state.board[x].concat(cellColor);
