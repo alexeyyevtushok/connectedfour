@@ -15,11 +15,13 @@ code {
     monospace;
 }
 
+/*main config*/
 .main{
   text-align: center;
   margin:0 auto;
 }
 
+/*Cell manipulation*/
 .cell {
   width: 90px;
   height: 90px;
@@ -43,24 +45,7 @@ code {
   transition: all 0.3s ease;
 }
 
-
-.cellGrid {
-  background-color: white;
-  box-shadow:
-  /* The top layer shadow */
-      0 1px 1px rgba(0,0,0,0.15),
-          /* The second layer */
-      0 10px 0 -5px #eee,
-          /* The second layer shadow */
-      0 10px 1px -4px rgba(0,0,0,0.15),
-          /* The third layer */
-      0 20px 0 -10px #eee,
-          /* The third layer shadow */
-      0 20px 1px -9px rgba(0,0,0,0.15);
-  display: inline-block;
-  padding:30px 40px;
-}
-
+/*Ending and wining layouts*/
 .gameEnd {
   background-color: white;
   box-shadow:
@@ -82,33 +67,12 @@ code {
   transition: all 1s ease;
 }
 
-
 .gameEnd.gameWin {
   font-weight: normal;
   font-size:25px;
   padding-bottom: 70px;
 }
-
-.winPage {
-  background-color: white;
-  box-shadow:
-  /* The top layer shadow */
-      0 1px 1px rgba(0,0,0,0.15),
-          /* The second layer */
-      0 10px 0 -5px #eee,
-          /* The second layer shadow */
-      0 10px 1px -4px rgba(0,0,0,0.15),
-          /* The third layer */
-      0 20px 0 -10px #eee,
-          /* The third layer shadow */
-      0 20px 1px -9px rgba(0,0,0,0.15);
-  display: inline-block;
-  width: 700px;
-  padding:30px 40px;
-  font-weight: bold;
-  font-size:20px;
-}
-
+/*circle with winner color after win*/
 .winColor{
   display: inline-block;
   border-radius: 50%;
@@ -120,23 +84,7 @@ code {
   left:10px;
 }
 
-button {
-  padding: 20px 50px;
-  background: orange;
-  border:none;
-  border-radius: 10%;
-  color:whitesmoke;
-  text-transform: uppercase;
-  font-size:15px;
-  font-weight: bold;
-  outline:0;
-  margin-bottom: 10px;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
+/*some color configs for labels and cells*/
 .playerLabel{
   color:black;
   display: inline-block;
@@ -160,5 +108,23 @@ button:hover {
 
 .player1 {
   background: #16a085;
+}
+
+/*button config*/
+button {
+  padding: 20px 50px;
+  background: orange;
+  border:none;
+  border-radius: 10%;
+  color:whitesmoke;
+  text-transform: uppercase;
+  font-size:15px;
+  font-weight: bold;
+  outline:0;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
