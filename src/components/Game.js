@@ -13,28 +13,26 @@ class Game extends Component {
   }
   //clicking on "start(stop)" button
   gameChanger = () => {
-    this.setState(prevState => {
-      return {
-        game: !prevState.game
-      }
-    });
+    this.setState({
+      game: !this.state.game
+    })
   }
     
   render(){
-    if(this.state.game===false){
+    if(this.state.game){
+      return(
+        <div className="main">
+          <Header onClicked={this.gameChanger} cstate={this.state.game}/>
+          <Board/>
+        </div>
+      );
+    }
       return(
       <div className="main">
         <Header onClicked={this.gameChanger} cstate={this.state.game}/>
         <div className="gameEnd">Press button to start a game</div>
       </div>
-      )
-    }
-    return(
-      <div className="main">
-        <Header onClicked={this.gameChanger} cstate={this.state.game}/>
-        <Board/>
-      </div>
-    );
+      );
   }
 }
 

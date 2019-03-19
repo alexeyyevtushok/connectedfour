@@ -29,20 +29,18 @@ class Board extends Component{
   handleClick(x){
     //if trying add cell out of range
     if(this.state.board[x].length!==6){
-      const cellColor = this.state.current;
-      const col = this.state.board[x].concat(cellColor);
+      const col = this.state.board[x].concat(this.state.current); //add color to array
       const updatedBoard = this.state.board.slice();
       updatedBoard[x] = col;
+
       this.setState({
         board:updatedBoard,
         current : this.state.current === 'red' ? 'green' : 'red'
       })
-      console.log(this.state.board);
     }
   }
 
   render(){
-    console.log(this.state.game);
     //const
     const grid = [];
     const height = 6;
