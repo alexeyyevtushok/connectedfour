@@ -122,6 +122,16 @@ hr {
   margin:10px auto;
 }
 
+.playerColor.player2{
+  background: #e74c3c;
+  transition: all 0.2s ease;
+}
+
+.playerColor.player1{
+  background: #16a085;
+  transition: all 0.2s ease;
+}
+
 .player2 {
   background: #e74c3c;
 }
