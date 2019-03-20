@@ -25,7 +25,7 @@ Child component of `Board`. Return cell template.
 
 Create array for `Board.state`. Array created for pressed cells.
 
-## How to launct project
+## How to launch a project
 You should install `node_moudles` and start project with `npm`
 ### `npm i`
 ### `npm start`
