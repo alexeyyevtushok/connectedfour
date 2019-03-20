@@ -9,8 +9,8 @@ class Game extends Component {
 
     this.state = {
       game:false,
-      width:7,
-      height:6,
+      column:7,
+      row:6,
     }
   }
   //clicking on "start(stop)" button
@@ -18,8 +18,8 @@ class Game extends Component {
     if(this.state.game){
       this.setState({
         game: !this.state.game,
-        width:7,
-        height:6
+        column:7,
+        row:6
       })
     }
     this.setState({
@@ -28,27 +28,53 @@ class Game extends Component {
   }
   //grid size 
   handleOptionChange = (event) => {
-    if (event.target.value === "option4x4") {
+    switch(event.target.value) {
+      case '4x4':
+        this.setState({
+          column: 4,
+          row: 4
+        });
+        break;
+      case '8x6':
+        this.setState({
+          column: 8,
+          row: 6
+        });
+        break;
+      case '9x6':
+        this.setState({
+          column: 9,
+          row: 6
+        });
+        break;
+      case '10x6':
+        this.setState({
+          column: 10,
+          row: 6
+        });
+        break;
+      default:
       this.setState({
-        width: 4,
-        height: 4
-      })
-    } else if (event.target.value === "option8x6") {
-      this.setState({
-        width: 8,
-        height: 6
-      })
-    } else if (event.target.value === "option7x7") {
-      this.setState({
-        width: 7,
-        height: 7
-      })
-    } else if (event.target.value === "option10x6") {
-      this.setState({
-        width: 10,
-        height: 6
-      })
+        column: 7,
+        row: 6
+      });
     }
+  }
+
+  addInput(option){
+    const lablels = []
+      lablels.push(
+        <label>
+        <input 
+        className="option-input radio" 
+        type="radio" name="config" 
+        value= {option}
+        onChange={this.handleOptionChange} 
+        />
+        {option}
+      </label>
+      );
+    return lablels;
   }
 
   render(){
@@ -56,7 +82,7 @@ class Game extends Component {
       return(
         <div className="main">
           <Header onClicked={this.gameChanger} cstate={this.state.game}/>
-          <Board width={this.state.width} height={this.state.height}/>
+          <Board column={this.state.column} row={this.state.row}/>
         </div>
       );
     }
@@ -67,41 +93,10 @@ class Game extends Component {
           <p>Base grid size: 7x6</p>
           <hr></hr>
             <div className="gameEndLabel">Choose another size: </div>
-              <label>
-                <input 
-                className="option-input radio" 
-                type="radio" name="config" 
-                value="option4x4" 
-                onChange={this.handleOptionChange} 
-                />
-                4x4
-              </label>
-              <label>
-                <input className="option-input radio" 
-                type="radio" 
-                name="config" 
-                value="option8x6" 
-                onChange={this.handleOptionChange} />
-                8x6
-              </label>
-              <label>
-                <input 
-                className="option-input radio" 
-                type="radio" 
-                name="config" 
-                value="option7x7" 
-                onChange={this.handleOptionChange} />
-                7x7
-              </label>
-              <label>
-                <input 
-                className="option-input radio" 
-                type="radio" 
-                name="config" 
-                value="option10x6" 
-                onChange={this.handleOptionChange} />
-                10x6
-              </label>
+              {this.addInput("4x4")}
+              {this.addInput("8x6")}
+              {this.addInput("9x6")}
+              {this.addInput("10x6")}
           </form>
         </div>
       );

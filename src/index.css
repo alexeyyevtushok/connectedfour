@@ -8,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* transform: scale(0.8); */
 }
 
 code {
@@ -27,8 +28,8 @@ h1{
 
 /*Cell manipulation*/
 .cell {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   display:inline-block;
   border-radius: 50%;
   background: #DCDCDC;
@@ -142,7 +143,7 @@ hr {
 
 /*button config*/
 button {
-  padding: 20px 50px;
+  padding: 15px 40px;
   background: orange;
   border:none;
   border-radius: 10%;
