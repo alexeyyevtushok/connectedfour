@@ -19,6 +19,7 @@ class Board extends Component{
     onClick={() => this.handleClick(x)} 
     />
   }
+  
   //click to cell
   handleClick(x){
     //if trying add cell out of range

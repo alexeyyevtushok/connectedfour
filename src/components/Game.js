@@ -12,9 +12,6 @@ class Game extends Component {
       width:7,
       height:6,
     }
-
-    this.inputHeighthandler = this.inputHeighthandler;
-    this.inputWidthHandler = this.inputWidthHandler;
   }
   //clicking on "start(stop)" button
   gameChanger = () => {
@@ -29,8 +26,7 @@ class Game extends Component {
       game: !this.state.game
     })
   }
-
-
+  //grid size 
   handleOptionChange = (event) => {
     if (event.target.value === "option4x4") {
       this.setState({
@@ -53,9 +49,8 @@ class Game extends Component {
         height: 6
       })
     }
-    console.log(this.state.width);
-    console.log(this.state.height);
   }
+
   render(){
     if(this.state.game){
       return(
