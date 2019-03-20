@@ -42,10 +42,10 @@ class Game extends Component {
         width: 8,
         height: 6
       })
-    } else if (event.target.value === "option9x9") {
+    } else if (event.target.value === "option7x7") {
       this.setState({
-        width: 9,
-        height: 9
+        width: 7,
+        height: 7
       })
     } else if (event.target.value === "option10x6") {
       this.setState({
@@ -94,9 +94,9 @@ class Game extends Component {
                 className="option-input radio" 
                 type="radio" 
                 name="config" 
-                value="option9x9" 
+                value="option7x7" 
                 onChange={this.handleOptionChange} />
-                9x9
+                7x7
               </label>
               <label>
                 <input 
