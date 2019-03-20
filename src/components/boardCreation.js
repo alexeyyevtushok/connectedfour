@@ -1,5 +1,7 @@
-var columns = 7;
-const boardCreation = new Array(columns);
-boardCreation.fill([]);
+function boardCreation(columns){
+  const board = new Array(columns);
+  board.fill([]);
+  return board;
+}
 
 export default boardCreation;

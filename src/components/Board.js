@@ -6,12 +6,9 @@ import boardCreation from './boardCreation'
 class Board extends Component{
   constructor(props){
     super(props)
-
     this.state = {
-      board: boardCreation,
+      board: boardCreation(this.props.width),
       current:'red',
-      height:6,
-      width:7
     }
   }
 
@@ -40,8 +37,8 @@ class Board extends Component{
   render(){
     //const
     const grid = [];
-    const height = this.state.height;
-    const width = this.state.width;
+    const height = this.props.height;
+    const width = this.props.width;
 
     //creation of grid
     for(let y=height-1;y>=0;y--){
